@@ -2,8 +2,11 @@
 
 import sys
 import requests
+from dotenv import load_dotenv
+import os
 
-API_TOKEN = ""
+load_dotenv()
+API_TOKEN = os.getenv('API_TOKEN')
 HEADERS = {"Authorization": f"Bearer {API_TOKEN}"}
 API_URL = "https://api-inference.huggingface.co/models/facebook/bart-large-cnn"
 
